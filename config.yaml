@@ -1,4 +1,5 @@
 theme: "hugo-xmin"
-baseURL: http://example.org/
+baseURL: https://relaxed-snyder-30b307.netlify.app/
 languageCode: en-us
-title: My New Hugo Site
+title: Workflow for Statistical Analysis
+author: Christopher Gandrud

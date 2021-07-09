@@ -21,13 +21,9 @@ editor_options:
 
 Welcome to to the course! This is the first of 2 sets of exercises
 introducing you to the R programming language[^1] that we will use
-throughout the course.
+throughout the workshop.
 
 [^1]: These lessons are based on @gandrud2020, Chapter 3.
-
-This and the next lesson are optional. Their intended for you if you are
-not that familiar with R, or you would like to practice your R basics
-before getting started.
 
 ## 📝 Lesson Preview
 
@@ -48,14 +44,10 @@ before getting started.
 
 ## 🏁 Getting Started with R and RStudio {#install-rstudio}
 
-To complete the exercises in this course, you will need to access
+To complete the exercises in this workshop, you will need to access
 RStudio.
 
-You can do this in the cloud on the course's **RStudio cloud** site:
-
--   <https://rstudio.cloud/project/1140732>
-
-Or download and **install** R and RStudio on your computer:
+Download and **install** R and RStudio on your computer:
 
 1.  Install R: <https://cran.r-project.org/>
 
@@ -74,13 +66,6 @@ outside of R. We will touch on this, especially in Part II of the
 course.
 
 💁 Tip: in the R Console or the Terminal, you can cancel a process with `Ctrl + c`.
-
-### Jupyter Lab
-
-Jupyter Lab is a popular alternative to RStudio. It is less tailored to
-R, but is used in many especially industry settings. If you would like
-to try it out, see setup instructions
-[here](https://github.com/christophergandrud/hu-live-coding-course-examples/blob/main/src/jupyter-lab-setup.md).
 
 ### Markdown
 

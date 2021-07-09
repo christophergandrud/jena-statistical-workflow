@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>install on My New Hugo Site</title>
-    <link>http://example.org/tags/install/</link>
-    <description>Recent content in install on My New Hugo Site</description>
+    <title>install on Workflow for Statistical Analysis</title>
+    <link>https://relaxed-snyder-30b307.netlify.app/tags/install/</link>
+    <description>Recent content in install on Workflow for Statistical Analysis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://example.org/tags/install/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://relaxed-snyder-30b307.netlify.app/tags/install/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>R Basics 1</title>
-      <link>http://example.org/post/optional-r-basics-1/</link>
+      <link>https://relaxed-snyder-30b307.netlify.app/post/optional-r-basics-1/</link>
       <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/post/optional-r-basics-1/</guid>
-      <description>👋 Welcome Welcome to to the course! This is the first of 2 sets of exercises introducing you to the R programming language1 that we will use throughout the course.
-This and the next lesson are optional. Their intended for you if you are not that familiar with R, or you would like to practice your R basics before getting started.
- 📝 Lesson Preview  Set up R and RStudio</description>
+      <guid>https://relaxed-snyder-30b307.netlify.app/post/optional-r-basics-1/</guid>
+      <description>👋 Welcome Welcome to to the course! This is the first of 2 sets of exercises introducing you to the R programming language1 that we will use throughout the workshop.
+ 📝 Lesson Preview  Set up R and RStudio
+ The R console
+ Install packages
+ Objects and assignment
+ Types (character, numeric, vector, data frame, list)
+ Component selection
+ Workspace and history
+   🏁 Getting Started with R and RStudio To complete the exercises in this workshop, you will need to access RStudio.</description>
     </item>
     
   </channel>

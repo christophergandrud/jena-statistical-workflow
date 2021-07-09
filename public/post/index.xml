@@ -1,37 +1,53 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on My New Hugo Site</title>
-    <link>http://example.org/post/</link>
-    <description>Recent content in Posts on My New Hugo Site</description>
+    <title>Posts on Workflow for Statistical Analysis</title>
+    <link>https://relaxed-snyder-30b307.netlify.app/post/</link>
+    <description>Recent content in Posts on Workflow for Statistical Analysis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://example.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://relaxed-snyder-30b307.netlify.app/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>R Basics 1</title>
-      <link>http://example.org/post/optional-r-basics-1/</link>
+      <title>Syllabus</title>
+      <link>https://relaxed-snyder-30b307.netlify.app/post/2021-07-09-syllabus/</link>
       <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/post/optional-r-basics-1/</guid>
-      <description>👋 Welcome Welcome to to the course! This is the first of 2 sets of exercises introducing you to the R programming language1 that we will use throughout the course.
-This and the next lesson are optional. Their intended for you if you are not that familiar with R, or you would like to practice your R basics before getting started.
- 📝 Lesson Preview  Set up R and RStudio</description>
+      <guid>https://relaxed-snyder-30b307.netlify.app/post/2021-07-09-syllabus/</guid>
+      <description>Workflow of Statistical Data Analysis Instructor: Christopher Gandrud, PhD
+Email: christopher.gandrud@gmail.com
+About In this workshop you will learn an end-to-end and &amp;ldquo;really reproducible&amp;rdquo; workflow for statistical data analysis. The workflow is centred on the R programming language. First you will learn the basic concepts of programming for statistical analysis and how these concepts are represented in R. Then you will learn how to structure your statistical projects from data gathering through data transformation and analysis to the presentation of results in automatically generated tables papers and slideshows in a way that is really reproducible.</description>
     </item>
     
     <item>
-      <title>[Intro to Computational Thinking] R Basics 2</title>
-      <link>http://example.org/post/optional-r-basics-2/</link>
-      <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
+      <title>R Basics 1</title>
+      <link>https://relaxed-snyder-30b307.netlify.app/post/optional-r-basics-1/</link>
+      <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/post/optional-r-basics-2/</guid>
+      <guid>https://relaxed-snyder-30b307.netlify.app/post/optional-r-basics-1/</guid>
+      <description>👋 Welcome Welcome to to the course! This is the first of 2 sets of exercises introducing you to the R programming language1 that we will use throughout the workshop.
+ 📝 Lesson Preview  Set up R and RStudio
+ The R console
+ Install packages
+ Objects and assignment
+ Types (character, numeric, vector, data frame, list)
+ Component selection
+ Workspace and history
+   🏁 Getting Started with R and RStudio To complete the exercises in this workshop, you will need to access RStudio.</description>
+    </item>
+    
+    <item>
+      <title>R Basics 2</title>
+      <link>https://relaxed-snyder-30b307.netlify.app/post/optional-r-basics-2/</link>
+      <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://relaxed-snyder-30b307.netlify.app/post/optional-r-basics-2/</guid>
       <description>📝 Lesson Preview  Functions
  Control Flow
  if statements
  for loops
  apply()
-  Parallel computation
-   Functions If objects are the nouns of the R language, functions are the verbs. They do things to objects. Let’s use the mean function as an example. This function takes the mean of a numeric vector object. Remember our numeric_vector object from Lesson 1:
-numeric_vector &amp;lt;- c(2.</description>
+ Advanced: Parallel computation
+    Functions If objects are the nouns of the R language, functions are the verbs. They do things to objects. Let’s use the mean function as an example. This function takes the mean of a numeric vector object. Remember our numeric_vector object from Lesson 1:</description>
     </item>
     
   </channel>

@@ -2,39 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/post/optional-r-basics-1/</loc>
+    <loc>https://relaxed-snyder-30b307.netlify.app/post/2021-07-09-syllabus/</loc>
     <lastmod>2021-07-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/post/optional-r-basics-2/</loc>
-    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://example.org/tags/basics/</loc>
+    <loc>https://relaxed-snyder-30b307.netlify.app/post/optional-r-basics-1/</loc>
     <lastmod>2021-07-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/install/</loc>
+    <loc>https://relaxed-snyder-30b307.netlify.app/post/optional-r-basics-2/</loc>
     <lastmod>2021-07-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/</loc>
+    <loc>https://relaxed-snyder-30b307.netlify.app/tags/basics/</loc>
     <lastmod>2021-07-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/post/</loc>
+    <loc>https://relaxed-snyder-30b307.netlify.app/tags/functions/</loc>
     <lastmod>2021-07-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/r/</loc>
+    <loc>https://relaxed-snyder-30b307.netlify.app/tags/if/</loc>
     <lastmod>2021-07-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://relaxed-snyder-30b307.netlify.app/tags/install/</loc>
     <lastmod>2021-07-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/functions/</loc>
-    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
+    <loc>https://relaxed-snyder-30b307.netlify.app/tags/loops/</loc>
+    <lastmod>2021-07-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/if/</loc>
-    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
+    <loc>https://relaxed-snyder-30b307.netlify.app/post/</loc>
+    <lastmod>2021-07-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/loops/</loc>
-    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
+    <loc>https://relaxed-snyder-30b307.netlify.app/tags/r/</loc>
+    <lastmod>2021-07-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://relaxed-snyder-30b307.netlify.app/tags/</loc>
+    <lastmod>2021-07-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaxed-snyder-30b307.netlify.app/</loc>
+    <lastmod>2021-07-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://relaxed-snyder-30b307.netlify.app/categories/</loc>
   </url>
 </urlset>

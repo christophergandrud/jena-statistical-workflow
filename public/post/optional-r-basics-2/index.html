@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>[Intro to Computational Thinking] R Basics 2 | My New Hugo Site</title>
+    <title>R Basics 2 | Workflow for Statistical Analysis</title>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     
@@ -18,14 +18,14 @@
     </nav>
 
 <div class="article-meta">
-<h1><span class="title">[Intro to Computational Thinking] R Basics 2</span></h1>
+<h1><span class="title">R Basics 2</span></h1>
 <h2 class="author">Christopher Gandrud</h2>
-<h2 class="date">2020/04/26</h2>
+<h2 class="date">2021/07/09</h2>
 </div>
 
 <main>
 
-<script src="http://example.org/post/optional-r-basics-2/index_files/header-attrs/header-attrs.js"></script>
+<script src="https://relaxed-snyder-30b307.netlify.app/post/optional-r-basics-2/index_files/header-attrs/header-attrs.js"></script>
 
 
 <div id="lesson-preview" class="section level2">
@@ -37,8 +37,8 @@
 <li><p><a href="#if"><code>if</code> statements</a></p></li>
 <li><p><a href="#loop-intro"><code>for</code> loops</a></p></li>
 <li><p><a href="#apply-intro"><code>apply()</code></a></p></li>
+<li><p><a href="#parallel-intro">Advanced: Parallel computation</a></p></li>
 </ul></li>
-<li><p><a href="#parallel-intro">Parallel computation</a></p></li>
 </ul>
 </div>
 <div id="functions-intro" class="section level2">
@@ -207,7 +207,7 @@ as.data.frame(means_apply)</code></pre>
 <p>To find the number of cores on your computer use:</p>
 <pre class="r"><code>library(parallel)
 detectCores()</code></pre>
-<pre><code>## [1] 4</code></pre>
+<pre><code>## [1] 8</code></pre>
 <p>Not all computation can be done in parallel. Somethings have to be done in sequence, because the output of one operation is needed for the computation of the subsequent operations. However, pretty much anything that can be looped or applied can be done in parallel. This will often improve the speed of the computation.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
 <p><code>mclapply()</code> from base R’s <em>parallel</em> package works like <code>lapply</code> (list apply) for. Imagine we have a list with 3 numeric vectors:</p>
 <pre class="r"><code>three_list &lt;- list(A = rnorm(n = 100, mean = 1),
@@ -217,13 +217,13 @@ detectCores()</code></pre>
 <p>Let’s compute the mean of each vector in the list in parallel:</p>
 <pre class="r"><code>mclapply(three_list, mean, mc.cores = 3)</code></pre>
 <pre><code>## $A
-## [1] 1.069952
+## [1] 1.002181
 ## 
 ## $B
-## [1] 1.953902
+## [1] 1.90761
 ## 
 ## $C
-## [1] 4.954733</code></pre>
+## [1] 4.971733</code></pre>
 <p><code>mc.cores</code> sets the number of cores to use. Usually use 1 - the number of cores you have available.</p>
 </div>
 <div id="exercises" class="section level2">
