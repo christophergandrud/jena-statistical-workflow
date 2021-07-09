@@ -1,9 +1,9 @@
 ---
-title: Reproducible Research Tools
+title: Introduction to Workflow for Statistical Analysis
 author: Christopher Gandrud
 date: '2021-07-06'
 slug: rep-research-tools
-weight: 6
+weight: 2
 categories:
   - R
 tags:
