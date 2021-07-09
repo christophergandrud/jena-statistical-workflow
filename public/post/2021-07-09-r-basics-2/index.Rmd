@@ -3,7 +3,7 @@ title: 'R Basics 2'
 author: Christopher Gandrud
 date: '2021-07-09'
 slug: optional-r-basics-2
-weight: 3
+weight: 4
 categories:
   - R
 tags:

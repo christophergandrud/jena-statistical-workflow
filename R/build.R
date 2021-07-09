@@ -1,2 +1,3 @@
-# An optional custom script to run before Hugo builds your site.
-# You can delete it if you do not need it.
+# Build slides
+# See: https://timmastny.rbind.io/blog/embed-slides-knitr-blogdown/
+blogdown::build_dir("static")
