@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>programming on Workflow for Statistical Analysis</title>
+    <link>https://relaxed-snyder-30b307.netlify.app/tags/programming/</link>
+    <description>Recent content in programming on Workflow for Statistical Analysis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 09 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://relaxed-snyder-30b307.netlify.app/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>File Organisation and Tidy Data Structures</title>
+      <link>https://relaxed-snyder-30b307.netlify.app/post/tidy-data-structures/</link>
+      <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://relaxed-snyder-30b307.netlify.app/post/tidy-data-structures/</guid>
+      <description>  📝 Lesson Preview  Why is file management important?
+ What is tidy data?
+ Manipulating tidy data
+   📣 Lecture slides   </description>
+    </item>
+    
+  </channel>
+</rss>
