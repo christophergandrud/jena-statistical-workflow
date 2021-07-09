@@ -14,14 +14,6 @@ Categories: []
 Tags: [R, data management, programming]
 ---
 
-## 📝 Lesson Preview
-
-- Why is file management important?
-
-- What is tidy data?
-
-- Manipulating tidy data
-
 ## 📣 Lecture slides
 
 ```{r echo=FALSE}
