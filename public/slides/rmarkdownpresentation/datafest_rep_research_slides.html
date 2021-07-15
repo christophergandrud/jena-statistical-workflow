@@ -28,7 +28,7 @@ Quantitative data science is the **creation of a computer programme** to gather,
 
 &lt;br&gt;
 
-**Literate programming paradigm**: the human-readable presentation of a programme is interspersed with computer source code that are compiled together [see @knuth1992].
+**Literate programming paradigm**: the human-readable presentation of a programme is interspersed with computer source code that are compiled together.
 
 ---
 
@@ -589,7 +589,7 @@ class: inverse, center, middle
 # Code Chunks Inline
 
 To use syntax highlighting on code chunks inline with the text, surround your text
-with ``
+with back-ticks.
 
 Knitable inline chunks with a back-tick then `r`.
 
@@ -602,7 +602,8 @@ Two plus two equals `r 2 + 2`.
 
 Produces:
 
-Two plus two equals 4
+Two plus two equals 4.  
+
 
 ---
 
@@ -699,11 +700,11 @@ In reality it can be unwieldy to include all of your research code in a single R
 
 An alternative is to `source` and script located elsewhere.
 
-For example, this chunk sources an R source code file stored in the file *bbc_medals_scrape.R*. It scapes a table from the BBC and includes creates a table with the results.
+For example, this chunk sources an R source code file stored in the file *Wiki_medals_scrape.R*. It scapes a table from the Wiki and includes creates a table with the results.
 
 
 ```r
-source('bbc_medals_scrape.R')
+source('Wiki_medals_scrape.R')
 
 # Create table
 knitr::kable(medals, caption = '2012 Medal Count')
@@ -713,19 +714,19 @@ knitr::kable(medals, caption = '2012 Medal Count')
 
 # Do . . .
 
-Download *bbc_medals_scrape.R* from: &lt;http://tinyurl.com/zqmr28w&gt;. Place it in the same folder as *main.Rmd*.
+Download *wiki_medals_scrape.R* from: &lt;https://tinyurl.com/54uu7v6f&gt;. Place it in the same folder as *main.Rmd*.
 
 Place the following code in a new code chunk in *main.Rmd*:
 
 
 ```r
-source('bbc_medals_scrape.R')
+source('wiki_medals_scrape.R')
 
 # Create table
 knitr::kable(medals, caption = '2012 Medal Count')
 ```
 
-Note: you will need to have the `rvest` and `dplyr` packages installed to run this script.
+Note: you will need to have the `rvest`, `purrr`, `janitor`, and `dplyr` packages installed to run this script.
 
 ---
 
@@ -850,19 +851,13 @@ model_table
 
 ---
 
-# Result:
+# Do . . .
 
-![](img/regression_table_stargaze.png)
+Include a regression table with `stargazer` in *main.Rmd*.
 
 ---
 
-# Do . . .
-
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-
-Include a regression table with `stargazer` in *main.Rmd*.
+class: inverse, center, middle
 
 # Pandoc Footnotes
 
@@ -1064,8 +1059,7 @@ Link this to *main.Rmd* in the header and add a citation for `@donoho2010` in th
 
 We only covered basic tools. Much more information is available at: &lt;http://rmarkdown.rstudio.com/&gt; and (shameless plug):
 
-![](img/rep_book_cover.png)
-
+&lt;img src="img/rep_book_cover.png" width="30%" /&gt;
 
 ---
 

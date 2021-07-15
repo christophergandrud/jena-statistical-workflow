@@ -206,13 +206,13 @@ detectCores()</code></pre>
 <p>Let’s compute the mean of each vector in the list in parallel:</p>
 <pre class="r"><code>mclapply(three_list, mean, mc.cores = 3)</code></pre>
 <pre><code>## $A
-## [1] 1.003069
+## [1] 1.068915
 ## 
 ## $B
-## [1] 1.876049
+## [1] 2.066244
 ## 
 ## $C
-## [1] 5.001385</code></pre>
+## [1] 5.214493</code></pre>
 <p><code>mc.cores</code> sets the number of cores to use. Usually use 1 - the number of cores you have available.</p>
 </div>
 <div id="exercises" class="section level2">
