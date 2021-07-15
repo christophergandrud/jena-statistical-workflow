@@ -17,5 +17,5 @@ Tags: [R, Literate Programming]
 ## 📣 Lecture slides
 
 ```{r echo=FALSE}
-knitr::include_url("https://relaxed-snyder-30b307.netlify.app/slides/rmarkdownpresentation/datafest_rep_research_slides")
+knitr::include_url("https://relaxed-snyder-30b307.netlify.app/slides/intro-slides/intro-slides")
 ```

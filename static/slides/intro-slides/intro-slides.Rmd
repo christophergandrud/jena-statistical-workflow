@@ -1,8 +1,8 @@
 ---
-title: "Why Automated Data Retrieval and Management?"
+title: "Introduction to Workflow for Statistical Analysis"
 author: "Christopher Gandrud"
 institute: "Jena"
-date: "2021-07-10 (updated: `r Sys.Date()`)"
+date: "2021-07-15 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     css: [robot, metropolis-fonts]
@@ -44,12 +44,7 @@ class: inverse, center, middle
 
 - do you want others to be able to **replicate** your data collection process?
 
-- do you use **online** data sources?
-
 - does the data task have **non-trivial** scope and complexity?
-
-
-modified from Munzert et al. (2015, xvi)
 
 ---
 
@@ -69,9 +64,11 @@ class: inverse, centre, middle
 background-color: #FFC400
 color: #24292F
 
-# Workflow vs. Work Execution
+# Work Execution
 
-> process of **programmatically** extracting data (from structured and unstructured sources) for further data processing, analysis, and storage.
+In quantitative methods courses, we usually learn about **work execution**
+
+> Work Execution: [FINISH]
 
 .small[see also [Wikipedia Data Extraction](https://en.wikipedia.org/wiki/Data_extraction)]
 
@@ -81,7 +78,9 @@ class: inverse, centre, middle
 background-color: #FFC400
 color: #24292F
 
-# Automated data management
+# Workflow
+
+But having an effective workflow is critical.
 
 > Creation, storage, and modification of structured data (including metadata) for programmatic access.
 
