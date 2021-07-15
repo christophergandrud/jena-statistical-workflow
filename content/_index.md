@@ -1,11 +1,7 @@
 ---
 title: Syllabus
 author: Christopher Gandrud
-date: '2021-07-09'
-weight: 1
-slug: []
-categories: []
-tags: []
+date: '2021-07-23'
 ---
 
 #  Workflow of Statistical Data Analysis
@@ -27,4 +23,6 @@ In this workshop you will learn an end-to-end and "really reproducible" workflow
 - Introduction to Reproducibility and Files Structures [13:30-15:00]
     
 - Introduction to Rmarkdown and Literate Programming [15.30-17:00]
+
+## Course Materials
     
