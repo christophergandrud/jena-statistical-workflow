@@ -1,4 +1,4 @@
-baseurl: "https://relaxed-snyder-30b307.netlify.app/"
+baseurl: "/"
 languageCode: "en-us"
 title: "Workflow for Statistical Analysis"
 theme: "hugo-xmin"
@@ -9,9 +9,6 @@ menu:
     - name: Home
       url: ""
       weight: 1
-    - name: Tags
-      url: "tags/"
-      weight: 2
 
 params:
   description: "Materials for Workflow for Statistical Analysis July 2021"

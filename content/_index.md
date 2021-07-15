@@ -6,7 +6,7 @@ date: '2021-07-23'
 
 #  Workflow of Statistical Data Analysis
 
-**Instructor: Christopher Gandrud, PhD**
+**Instructor: 👋  Christopher Gandrud, PhD**
 
 **Email:** [christopher.gandrud\@gmail.com](mailto:christopher.gandrud@gmail.com)
 
@@ -14,7 +14,7 @@ date: '2021-07-23'
 
 In this workshop you will learn an end-to-end and "really reproducible" workflow for statistical data analysis. The workflow is centred on the R programming language. First you will learn the basic concepts of programming for statistical analysis and how these concepts are represented in R. Then you will learn how to structure your statistical projects from data gathering through data transformation and analysis to the presentation of results in automatically generated tables papers and slideshows in a way that is really reproducible. To do this, you will learn tools of literate programming—RMarkdown and command line file manipulation—that allow you to "weave" together your entire statistical workflow. 
 
-## Course Outline
+## 📝 Course Outline
 
 - Introduction to statistical workflows [9:00-10:30]
     
@@ -24,5 +24,5 @@ In this workshop you will learn an end-to-end and "really reproducible" workflow
     
 - Introduction to Rmarkdown and Literate Programming [15.30-17:00]
 
-## Course Materials
+## 📚 Course Materials
     
