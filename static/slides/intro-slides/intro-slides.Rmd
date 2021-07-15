@@ -11,6 +11,7 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+bibliography: datafest_rep.bib
 ---
 
 ```{r setup, include=FALSE}
@@ -18,17 +19,194 @@ library(tidyverse)
 theme_set(theme_minimal())
 ```
 
-# 📝 Lesson Preview
+---
 
-- What is a workflow?
+# Is this research?
 
-- Why reproducible research?
+![](img/journal_ss.png)
 
-- Reproducible research workflow
+---
 
-- Why R (or other programmatic approach to statistical analysis)?
+# Is this research?
 
-- Automation/Effort trade off
+![](img/cox.png)
+
+---
+
+# No
+
+> Papers, articles, slideshows, talks, books are **advertising, not research**.
+
+---
+
+# What are journal articles/books/etc?
+
+> **Presentation documents**: announce select findings and try to convince an
+audience that they are correct [@mesirov2010].
+
+---
+
+# What is research?
+
+Quantitative research involves the **procedures** and **choices** researchers make to **gather** data, **process** it, and **analysis** it in order to address their research questions.
+
+<br>
+<br>
+
+This includes “the **full software environment**, **code**, and **data** that produced the results” [@donoho2010, 3015].
+
+---
+
+# Quants and computer programming
+
+> The practice of quantitative science **is computer programming**.
+
+<br>
+
+So, we need **computer programming tools** (preview: literate programming).
+
+---
+
+class: inverse, center, middle
+
+# Reproducible Comp. Research
+
+---
+
+# Replicable
+
+<br>
+<br>
+<br>
+
+**Replicable research**: when there is sufficient information available for independent researchers to make the **same findings**, using the **same procedures** with ***new*** data.
+
+---
+
+# However . . .
+
+Sometimes full replications are not feasible because:
+
+- **limited resources** for gathering new data (e.g. very expensive to build
+another Large Hadron Collider),
+
+- the original research already sampled the **universe of cases**.
+
+*So...*
+
+---
+
+# Reproducible
+
+<br>
+<br>
+<br>
+
+**Reproducible research**: when there is **sufficient information** available for independent researchers to make the same findings, using the same procedures with the **same data**.
+
+---
+
+# Sufficient info.?--unconnected files
+
+![](img/non_linked_workflow/unconnected_workflow.png)
+
+---
+
+# Sufficient info.?--dynamically linked files
+
+![](img/linked_workflow/rep_workflow.png)
+
+---
+
+# Linking with literate programming 
+
+Quantitative data science is the **creation of a computer programme** to gather, transform, analyse data and present the results.
+
+<br>
+
+**Literate programming paradigm**: the human-readable presentation of a programme is interspersed with computer source code that are compiled together [see @knuth1992].
+
+---
+
+# Toolbox
+
+- **Machine-readable source code**: R (alternatives: Python, Julia, etc.)
+
+- **Human-readable explanation**: a markup language like Markdown
+(alternatives: $\LaTeX$, HTML, etc.)
+
+- "**Knit**" together with R Markdown.
+
+    + R Markdown allows us to use one markup language--Markdown--to output to different presentation document types (e.g. PDF, HTML, MS Word).
+
+    + Conversion from R Markdown to these formats is done via [Pandoc](http://pandoc.org/)
+
+---
+
+# Why reproducible research? 
+
+There are **costs** to using these tools. **Why** do it?
+
+> Reproducibility is a **minimum** standard for evaluating scientific claims.
+
+---
+
+# Mistakes
+
+<br>
+<br>
+
+Reproducibility can help uncover research fabrication. But more commonly . . .
+
+<br>
+
+We **all make mistakes** during all stages of our research!
+
+---
+
+# A mistake 
+
+I wanted to merge fisal policy data from two data sets using country IDs.
+
+![](img/codes.png)
+
+---
+
+# A mistake
+
+But, Eurostat uses slightly different country IDs.
+
+![](img/mismatched_codes.png)
+
+---
+
+# Correcting the mistake
+
+Fortunately, I had documented all of my steps using literate programming and could quickly find and fix the problem.
+
+![](img/matched_codes.png)
+
+---
+
+# Correcting mistakes
+
+<br>
+<br>
+
+**Instead of pretending** like mistakes don’t happen, we should have **procedures that help us minimise** our errors and allow us (and others) to **find and correct** the errors we do make.
+
+<br>
+
+Really reproducible research is an important part of this process.
+
+---
+
+# Important Caveat!
+
+> "A study can be reproducible and still be wrong" [@peng2014].
+<br>
+<br>
+The original finding could just have been noise or caused by some data processing error and so on.
 
 ---
 
@@ -156,8 +334,6 @@ Programmatic and reproducible statistical research workflows are valuable.
 
 ---
 
----
-
 # 🏕 NGOs
 
 NGO's are becoming increasingly data-oriented and need people with **skills** to
@@ -211,128 +387,6 @@ knitr::include_graphics("img/pay-by-experience.png")
 
 ---
 
-class: inverse, centre, middle
-
-# ⍰ Why reproducible research?
-
----
-
-class: inverse, centre, middle
-background-color: #FF8C03
-
-# ⍰ What is reproducible research?
-
----
-
-class: inverse, centre, middle
-background-color: #FFC400
-
-#  Really reproducible research
-
-> the data and code used to make a finding are **available** and they are **sufficient** for an independent researcher to **recreate the finding** (Peng 2011, 1226)
-
-Make available the research, **not just the advertising** for the findings (e.g. papers, book).
-
----
-
-# Reproducibility vs. Replication
-
-**Reproducibility**: an independent study makes the same findings using the
-**same data** and **code** as the original researchers.
-
-**Replicability**: an independent study makes the same conclusions as the original
-using **other** data, code, and even methods,
-i.e. independent verification.
-
----
-
-# Reproducibility vs. Replication
-
-> ''A study can be reproducible and still be wrong'' [Peng 2014](http://simplystatistics.org/2014/06/06/the-real-reason-reproducible-research-is-important/).
-
-E.g. a finding that is statistically significant in one study may remain statistically
-significant when reproduced using the original data/code, but **replication studies
-are unable to find a similar result**.
-
-The original finding could just have been
-[noise](http://andrewgelman.com/2014/09/03/disagree-alan-turing-daniel-kahneman-regarding-strength-statistical-evidence/).
-
----
-
-# Why reproducibility?
-
-- **Replication** is the ''**ultimate standard**'' for judging scientific claims (Peng 2011).
-
-- **Reproducibility**
-
-    + **Enhances replication** (other researchers can understand how an analysis
-    was actually done)
-
-    + Is a **minimum standard** for judging scientific claims when replication is
-    not possible.
-
----
-
-# Why reproducibility?
-
-Reproducibility helps **avoid effort duplication**:
-
-- Others **don't waste time**:
-
-    + Gathering data that has already been gathered.
-
-    + Discovering procedures that have already been discovered.
-
----
-
-# Why reproducibility?
-
-- Reproducibility also makes it possible to **find and correct errors**.
-
-- Recent examples:
-    - Translation errors in the
-    [World Values Survey](http://www.washingtonpost.com/blogs/monkey-cage/wp/2014/09/02/world-values-lost-in-translation/).
-
-    - Data errors in research on
-    [intestinal worm treatment and school attendance](http://www.columbia.edu/~mh2245/w/worms.html).
-
-    - [L'Affaire LaCour](http://www.vox.com/2015/5/20/8630535/same-sex-marriage-study):
-    data *fabrication* discovered.
-
-- Data errors can cause spurious findings that ultimately **waste researchers time**,
-because they try to explain 'wrong' findings.
-
----
-
-# Why reproducibility?
-
-- **Higher research impact**
-
-    + Reproducible research is likely to be more **useful for other researchers**.
-    They can use your data and learn from your code and methods.
-
-    + More use → more impact (e.g. citations)
-
-- **Better work habits**
-
-    + Thinking about reproducibility from the beginning makes your files
-    **better organised** and your work is **better documented**.
-
-    + This allows you to **build on your own work** more effectively.
-
----
-
-# Reproducible research workflow
-
-.center[
-```{r rep-flow, echo=FALSE, out.width="70%"}
-knitr::include_graphics("img/rep-research-workflow.png")
-```
-]
-
-.small[from Gandrud (2020, 25)]
----
-
 # Practical tips for reproducible research
 
 - ✏️ Document Everything!
@@ -349,7 +403,7 @@ knitr::include_graphics("img/rep-research-workflow.png")
 
 class: inverse, center, middle
 
-# Personal data privacy
+# Important Sidenote: Personal data privacy
 
 ---
 
@@ -394,7 +448,9 @@ Consider the needs for privacy and protecting persons' data.
 
 ---
 
-# ⚠️ How much effort should you give to automating your workflow?
+# ⚠️ How much effort . . .
+
+. . . should you give to automating your workflow?
 
 ```{r echo=FALSE, out.width="75%"}
 knitr::include_graphics("https://imgs.xkcd.com/comics/is_it_worth_the_time.png")
@@ -437,3 +493,7 @@ class: inverse, center, middle
 background-color: #FB3579
 
 To prepare: we will build up to converting one of your research projects to a reproducible statistical workflow.
+
+---
+
+## References

@@ -1,86 +1,20 @@
 ---
 title: "Reproducible Research Tools"
 author: "Christopher Gandrud"
-date: "2021-07-23"
+institute: "Jena"
+date: "2021-07-15 (updated: `r Sys.Date()`)"
 output:
-    ioslides_presentation:
-        css: datafest_slides.css
-        highlight: kate
+  xaringan::moon_reader:
+    css: [robot, metropolis-fonts]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
 bibliography: datafest_rep.bib
 ---
 
-## Review: Is this research?
-
-![](img/journal_ss.png)
-
-## Is this research?
-
-![](img/cox.png)
-
-## No
-
-> Papers, articles, slideshows, talks, books are **advertising, not research**.
-
-## What are journal articles/books/etc?
-
-> **Presentation documents**: announce select findings and try to convince an
-audience that they are correct [@mesirov2010].
-
-## What is research?
-
-Quantitative research involves the **procedures** and **choices** researchers make to **gather** data, **process** it, and **analysis** it in order to address their research questions.
-
-<br>
-<br>
-
-This includes “the **full software environment**, **code**, and **data** that produced the results” [@donoho2010, 3015].
-
-## Quants and computer programming
-
-> The practice of quantitative science **is computer programming**.
-
-<br>
-
-So, we need **computer programming tools** (preview: literate programming).
-
-# Reproducible Comp. Research
-
-## Replicable
-
-<br>
-<br>
-<br>
-
-**Replicable research**: when there is sufficient information available for independent researchers to make the **same findings**, using the **same procedures** with ***new*** data.
-
-## However . . .{.build}
-
-Sometimes full replications are not feasible because:
-
-- **limited resources** for gathering new data (e.g. very expensive to build
-another Large Hadron Collider),
-
-- the original research already sampled the **universe of cases**.
-
-*So...*
-
-## Reproducible
-
-<br>
-<br>
-<br>
-
-**Reproducible research**: when there is **sufficient information** available for independent researchers to make the same findings, using the same procedures with the **same data**.
-
-## Sufficient info.?--unconnected files
-
-![](img/non_linked_workflow/unconnected_workflow.png)
-
-## Sufficient info.?--dynamically linked files
-
-![](img/linked_workflow/rep_workflow.png)
-
-## Linking with literate programming {.build}
+# Review: Linking with literate programming
 
 Quantitative data science is the **creation of a computer programme** to gather, transform, analyse data and present the results.
 
@@ -88,7 +22,9 @@ Quantitative data science is the **creation of a computer programme** to gather,
 
 **Literate programming paradigm**: the human-readable presentation of a programme is interspersed with computer source code that are compiled together [see @knuth1992].
 
-## Toolbox
+---
+
+# Toolbox
 
 - **Machine-readable source code**: R (alternatives: Python, Julia, etc.)
 
@@ -101,13 +37,17 @@ Quantitative data science is the **creation of a computer programme** to gather,
 
     + Conversion from R Markdown to these formats is done via [Pandoc](http://pandoc.org/)
 
-## Why reproducible research? {.build}
+---
+
+# Why reproducible research?
 
 There are **costs** to using these tools. **Why** do it?
 
 > Reproducibility is a **minimum** standard for evaluating scientific claims.
 
-## Mistakes
+---
+
+# Mistakes
 
 <br>
 <br>
@@ -118,45 +58,15 @@ Reproducibility can help uncover research fabrication. But more commonly . . .
 
 We **all make mistakes** during all stages of our research!
 
-## A recent mistake {.build}
+---
 
-I wanted to merge fiscal policy data from two data sets using country IDs.
-
-![](img/codes.png)
-
-## A recent mistake
-
-But, Eurostat uses slightly different country IDs.
-
-![](img/mismatched_codes.png)
-
-## Correcting the mistake
-
-Fortunately, I had documented all of my steps using literate programming and could quickly find and fix the problem.
-
-![](img/matched_codes.png)
-
-## Correcting mistakes
-
-<br>
-<br>
-
-**Instead of pretending** like mistakes don’t happen, we should have **procedures that help us minimise** our errors and allow us (and others) to **find and correct** the errors we do make.
-
-<br>
-
-Really reproducible research is an important part of this process.
-
-## Important Caveat!
-
-> "A study can be reproducible and still be wrong" [@peng2014].
-<br>
-<br>
-The original finding could just have been noise or caused by some data processing error and so on.
+class: inverse, center, middle
 
 # Plan for learning tools
 
-## Skills checklist
+---
+
+# Skills checklist
 
 - Understand a reproducible research **workflow** with **literate programming**
 
@@ -168,15 +78,15 @@ The original finding could just have been noise or caused by some data processin
 
 > - **Pandoc** footnotes and citations
 
-## Following along
+---
+
+# Following along
 
 In this workshop we will **create a simple fake research project/article** using the literate programming tool R Markdown.
 
-<br>
+---
 
-A completed version of the project can be found at: <http://preview.tinyurl.com/hynlfxq>
-
-## What you need
+# What you need
 
 - Installed:
 
@@ -188,16 +98,23 @@ A completed version of the project can be found at: <http://preview.tinyurl.com/
 
 - Working internet connection
 
+---
+
+class: inverse, center, middle
 
 # Setup R Markdown File
 
-## Create a new R Markdown file {.build}
+---
+
+# Create a new R Markdown file
 
 In RStudio: `File` > `New File` > `R Markdown...`
 
 ![](img/new_rmarkdown.png)
 
-## Save your file
+---
+
+# Save your file
 
 <br>
 <br>
@@ -205,10 +122,15 @@ In RStudio: `File` > `New File` > `R Markdown...`
 
 Save your file as **main.Rmd** in a new folder called **datafest_reproduce**.
 
+---
+
+class: inverse, center, middle
 
 # YAML Syntax
 
-## The header
+---
+
+# The header
 
 Your file should start with something like:
 
@@ -223,7 +145,9 @@ output: pdf_document
 
 This is the R Markdown file's **header**.
 
-## The header
+---
+
+# The header
 
 An R Markdown file is just a text file with markup instructions that R (and RStudio) understand.
 
@@ -233,7 +157,9 @@ It is at the start of a file and comes between `---`.
 
 The header is written in YAML.
 
-## YAML
+---
+
+# YAML
 
 YAML is a **human read-able data format**.
 
@@ -243,7 +169,9 @@ YAML is a **human read-able data format**.
 
 **Hierarchy** is maintained with **tabs**.
 
-## This presentation's header
+---
+
+# This presentation's header
 
 ```
 ---
@@ -258,7 +186,9 @@ bibliography: datafest_rep.bib
 ---
 ```
 
-## In case you were wondering
+---
+
+# In case you were wondering
 
 <br>
 <br>
@@ -266,7 +196,9 @@ bibliography: datafest_rep.bib
 
 YAML is a recursive acronym: ''YAML Ain't Markup Language''.
 
-## Output types
+---
+
+# Output types
 
 The `output` element allows you to specify a wide variety of different output formats, including PDF, HTML, and MS Word. E.g.:
 
@@ -290,7 +222,9 @@ output: word_document
 
 **Do. . .**: Compile your document to different formats.
 
-## Table of Contents & Numbered Sections
+---
+
+# Table of Contents & Numbered Sections
 
 You can add a table of contents and numbered sections to your PDF output:
 
@@ -302,7 +236,9 @@ output:
     fig_captions: true
 ```
 
-## Different options for different output
+---
+
+# Different options for different output
 
 To do the same for **HTML**, for example, also include the information under `html_document`.
 
@@ -316,7 +252,9 @@ output:
     toc: false
 ```
 
-## Figure Options
+---
+
+# Figure Options
 
 Create consistent figure formatting, e.g.:
 
@@ -333,7 +271,9 @@ output:
 To set the actual caption label, use the `fig.cap='SOME CAPTION'` **code chunk
 option**.
 
-## LaTeX options note
+---
+
+# LaTeX options note
 
 One important exception to the hierarchical options rule are a number of $\LaTeX$ specific formatting options including `lang`, `fontsize`, and `documentclass`.
 
@@ -345,7 +285,9 @@ output: pdf_document
 fontsize: 12pt
 ```
 
-## Do . . . .
+---
+
+# Do . . . .
 
 <br>
 <br>
@@ -353,7 +295,9 @@ fontsize: 12pt
 
 Include a few custom document options in your *main.Rmd* header.
 
-## Templates
+---
+
+# Templates
 
 Templates allow you to choose custom formatting.
 
@@ -367,7 +311,9 @@ For example, the [rticles](https://github.com/rstudio/rticles) has templates for
 
 - Elsevier journals
 
-## Using rticles templates
+---
+
+# Using rticles templates
 
 1. Install `rticles`.
 
@@ -375,7 +321,9 @@ For example, the [rticles](https://github.com/rstudio/rticles) has templates for
 
 ![](img/rticles_start.png)
 
-## Using rticles templates
+---
+
+# Using rticles templates
 
 Then, update YAML information. For example, with the Elsevier template:
 
@@ -403,7 +351,9 @@ bibliography: mybibfile.bib
 output: rticles::elsevier_article
 ```
 
-## Do . . .
+---
+
+# Do . . .
 
 <br>
 <br>
@@ -411,14 +361,22 @@ output: rticles::elsevier_article
 
 Feel free to **replace** *main.Rmd* with an article template and use that for the remainder of the session.
 
+---
+
+class: inverse, center, middle
+
 # Markdown Syntax
 
-## Markdown
+---
+
+# Markdown
 
 Below the header in *main.Rmd* you should see text that looks like this:
 
+
+---
 ```
-## R Markdown
+# R Markdown
 
 This is an R Markdown document. Markdown is a simple formatting
 syntax for authoring HTML, PDF, and MS Word documents. For more
@@ -430,7 +388,9 @@ R code chunks within the document. You can embed an R code chunk
 like this:
 ```
 
-## Markdown
+---
+
+# Markdown
 
 Originally created by John Gruber to be an easy way to:
 
@@ -438,7 +398,9 @@ Originally created by John Gruber to be an easy way to:
 
 - that are **human-readable as text files**.
 
-## Markdown: HTML less painful {.build}
+---
+
+# Markdown: HTML less painful
 
 **HTML**:
 
@@ -461,7 +423,9 @@ This is some text with a [link](http://www.example.com).
 Here is some **bold** text.
 ```
 
-## R Markdown
+---
+
+# R Markdown
 
 <br>
 <br>
@@ -469,7 +433,9 @@ Here is some **bold** text.
 
 R Markdown allows us to not only make writing HTML easier but also $\LaTeX$ and MS Word via Pandoc.
 
-## Markdown syntax: Headers
+---
+
+# Markdown syntax: Headers
 
 ```
 # Header 1
@@ -481,7 +447,9 @@ R Markdown allows us to not only make writing HTML easier but also $\LaTeX$ and 
 
 And so on.
 
-## Markdown syntax
+---
+
+# Markdown syntax
 
 Horizontal lines:
 
@@ -491,17 +459,19 @@ Horizontal lines:
 
 Bold text:
 
-```
-**bold**
+```markdown
+  **bold**
 ```
 
 Italics:
 
-```
-*italics*
+```markdown
+  *italics*
 ```
 
-## Markdown syntax
+---
+
+# Markdown syntax
 
 Links:
 
@@ -515,7 +485,9 @@ Images:
 ![text description](FILE/PATH.png)
 ```
 
-## Markdown syntax
+---
+
+# Markdown syntax
 
 Unordered Lists:
 
@@ -537,7 +509,9 @@ Ordered Lists:
 3. Item three
 ```
 
-## Tables {.build}
+---
+
+# Tables
 
 ```
 | Name   | Something |
@@ -553,7 +527,9 @@ Ordered Lists:
 | Stuff  | Things    |
 | Things | Stuff     |
 
-## Math {.build}
+---
+
+# Math
 
 R Markdown from RStudio supports [MathJax](http://www.mathjax.org/) (and $\LaTeX$). So, you can
 write any [$\LaTeX$ math](http://en.wikibooks.org/wiki/LaTeX/Mathematics) with
@@ -574,7 +550,9 @@ $$s^2 = \frac{\sum(x - \bar{x})^2}{n - 1}$$
 
 $$s^2 = \frac{\sum(x - \bar{x})^2}{n - 1}$$
 
-## Expansion
+---
+
+# Expansion
 
 You can include **any** HTML syntax in a Markdown document. You can also change the formatting by adding a **custom CSS** file (just like a website).
 
@@ -582,7 +560,9 @@ However, this will **only render in HTML output.**
 
 If you are using $\LaTeX$ (other than math syntax), you can also include $\LaTeX$ syntax in your RMarkdown document for rendering as a PDF.
 
-## Do . . .
+---
+
+# Do . . .
 
 Delete all of the content of *main.Rmd* and use at least **three** pieces of Markdown syntax.
 
@@ -590,9 +570,15 @@ Delete all of the content of *main.Rmd* and use at least **three** pieces of Mar
 
 When you're finished "knit" the file and see the results by clicking on <img src="img/knit_button.png" height="35" width="100">.
 
+---
+
+class: inverse, center, middle
+
 # R Code Chunks
 
-## Code chunks Inline {.build}
+---
+
+# Code Chunks Inline
 
 To use syntax highlighting on code chunks inline with the text, surround your text
 with ``
@@ -607,23 +593,11 @@ Two plus two equals `r 2 + 2`.
 
 Produces:
 
-Two plus two equals `r 2 + 2`.
+Two plus two equals `r 2 + 2`
 
-## Do . . .
+---
 
-<br>
-<br>
-<br>
-
-Add this knitable code to *main.Rmd*:
-
-```{r, eval=FALSE}
-Two plus two equals `r 2 + 2`.
-```
-
-If you want, use a non-R engine to conduct some operation and return the results inline.
-
-## Code chunks in Display
+# Code chunks in Display
 
 Use three back-ticks (```) to **start** and **end** a code chunk that is **not run**.
 
@@ -631,18 +605,9 @@ To create a **knit-able** code chunk begin the chunk with ````{r}`. Close the ch
 
 Note: `r` is just one of the "engines" you can use with RMarkdown. Others include `python`, `bash`, and `scala`.
 
+---
 
-## Do . . .
-
-<br>
-<br>
-
-Add this code to *main.Rmd* in a knitable display code chunk
-
-```
-plot(1:10, rnorm(n = 10))
-```
-## Automatic table generation (basics) {.build}
+# Automatic table generation (basics)
 
 You can turn any matrix or data frame into a well formatted table with the knitr function `kable`.
 
@@ -650,7 +615,9 @@ You can turn any matrix or data frame into a well formatted table with the knitr
 knitr::kable(mtcars)
 ```
 
-## Do . . .
+---
+
+# Do . . .
 
 <br>
 <br>
@@ -661,7 +628,9 @@ Place the following code in a display chunk in your *main.Rmd* file:
 knitr::kable(mtcars)
 ```
 
-## Chunk options
+---
+
+# Chunk options
 
 Change how R Markdown chunks behave with **options**. Place
 options in the chunk head: ````{r echo=FALSE, error=FALSE}`
@@ -676,7 +645,9 @@ options in the chunk head: ````{r echo=FALSE, error=FALSE}`
 
 Many others at <http://yihui.name/knitr/options>
 
-## Computationally intensive work
+---
+
+# Computationally intensive work
 
 Avoid running code time-intensive code everytime a presentation document is compiled. 
 Different strategies:
@@ -687,7 +658,9 @@ Different strategies:
 
 Paradigm for both is to *run code only when it changes*.
 
-## Global chunk options
+---
+
+# Global chunk options
 
 You can set the the options for all code chunks in a document with `knitr::opts_chunk$set`.
 
@@ -697,14 +670,18 @@ For example, include a code chunk at the beginning of your document with:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Do . . .
+---
+
+# Do . . .
 
 <br>
 <br>
 
 Set the code chunks in *main.Rmd* so that only plots/tables are returned to the presentation document.
 
-## Sourcing an external script {.build}
+---
+
+# Sourcing an external script
 
 In reality it can be unwieldy to include all of your research code in a single R Markdown document.
 
@@ -719,7 +696,9 @@ source('bbc_medals_scrape.R')
 knitr::kable(medals, caption = '2012 Medal Count')
 ```
 
-## Do . . .
+---
+
+# Do . . .
 
 Download *bbc_medals_scrape.R* from: <http://tinyurl.com/zqmr28w>. Place it in the same folder as *main.Rmd*.
 
@@ -734,7 +713,9 @@ knitr::kable(medals, caption = '2012 Medal Count')
 
 Note: you will need to have the `rvest` and `dplyr` packages installed to run this script.
 
-## Regression estimates tabel
+---
+
+# Regression estimates tabel
 
 The [modelsummary](https://github.com/vincentarelbundock/modelsummary) package creates well formatted regression parameter estimate tables.
 
@@ -755,17 +736,23 @@ model_table <- modelsummary(models,
                        type = 'latex', header = FALSE)
 ```
 
-## Table output
+---
+
+# Table output
 
 ```{r}
 model_table
 ```
 
-## Result:
+---
+
+# Result:
 
 ![](img/regression_table_stargaze.png)
 
-## Do . . .
+---
+
+# Do . . .
 
 <br>
 <br>
@@ -775,7 +762,9 @@ Include a regression table with `stargazer` in *main.Rmd*.
 
 # Pandoc Footnotes
 
-## Pandoc footnotes
+---
+
+# Pandoc footnotes
 
 R Markdown can use Pandoc footnotes.
 
@@ -788,9 +777,15 @@ e.g.
 
 - `[^KEY]: This is a footnote.`
 
+---
+
+class: inverse, center, middle
+
 # Pandoc/BibTeX Citations
 
-## BibTeX citations
+---
+
+# BibTeX citations
 
 BibTex allows you to create a **database** of **all** of the **literature/packages
 you cite**.
@@ -802,7 +797,9 @@ You can then insert them into your text and they will:
 - Generate an appropriately ordered, consistently formatted **reference list** at
 the end of your document **with only the works you actually cited**.
 
-## The BibTeX Database
+---
+
+# The BibTeX Database
 
 A BibTeX database is just a text file with the extension `.bib`.
 
@@ -818,7 +815,9 @@ Each entry follows a standard format depending on the type of media.
 
 **Note**: Commas are very important!
 
-## The Cite Key
+---
+
+# The Cite Key
 
 <br>
 <br>
@@ -831,7 +830,9 @@ They must be **unique**.
 
 It **does not matter** what order your BibTeX entries are in the `.bib` file.
 
-## BibTeX Articles
+---
+
+# BibTeX Articles
 
 ```
 @article{donoho2010,
@@ -845,7 +846,9 @@ It **does not matter** what order your BibTeX entries are in the `.bib` file.
 }
 ```
 
-## BibTeX Books
+---
+
+# BibTeX Books
 
 ```
 @book{cox1997,
@@ -859,7 +862,9 @@ It **does not matter** what order your BibTeX entries are in the `.bib` file.
 }
 ```
 
-## More
+---
+
+# More
 
 <br>
 <br>
@@ -867,7 +872,9 @@ It **does not matter** what order your BibTeX entries are in the `.bib` file.
 For more media types and entry fields see
 [http://en.wikipedia.org/wiki/BibTeX](http://en.wikipedia.org/wiki/BibTeX).
 
-## Tip: Google Scholar
+---
+
+# Tip: Google Scholar
 
 Google scholar generates BibTeX entries.
 
@@ -877,7 +884,9 @@ For a YouTube how-to see [https://www.youtube.com/watch?v=SsJSR2b4_qc](https://w
 
 Sometimes they need to be **cleaned** a little.
 
-## Linking your .bib file.
+---
+
+# Linking your .bib file.
 
 To link your `.bib` file to your RMarkdown document add to the header:
 
@@ -889,7 +898,9 @@ bibliography:
 
 **Note**: The files should be in the **same directory** as your R Markdown file.
 
-## Including BibTeX citations in RMarkdown
+---
+
+# Including BibTeX citations in RMarkdown
 
 R Markdown uses [Pandoc syntax](http://johnmacfarlane.net/pandoc/README.html)
 to include a citation in-text.
@@ -899,7 +910,9 @@ General format: `@CITE_KEY`.
 So if the cite key is `box1973` then `@box1973` will return  @box1973 in the text
 of the presentation document.
 
-## Formatting In-Text Citations
+---
+
+# Formatting In-Text Citations
 
 | Markup                      | Result                    |
 | --------------------------- | ------------------------- |
@@ -909,7 +922,9 @@ of the presentation document.
 | `[@box1973; @acemoglu2000]` | [@box1973; @acemoglu2000] |
 | `@box1973 [33-40]`          | @box1973 [33-40]          |
 
-## Reference List
+---
+
+# Reference List
 
 A reference list with the full bibliographic details of all cited documents
 will be **automatically created** at the end of your document.
@@ -917,7 +932,9 @@ will be **automatically created** at the end of your document.
 Tip: Put `# References` at the very end of your R Markdown document to
 have a section heading before the reference list.
 
-## Do . . .
+---
+
+# Do . . .
 
 Create a file called *references.bib* in the same folder as *main.Rmd*.
 
@@ -937,14 +954,18 @@ Include the following citation:
 
 Link this to *main.Rmd* in the header and add a citation for `@donoho2010` in the text.
 
-## Futher resources {.build}
+---
+
+# Futher resources
 
 We only covered basic tools. Much more information is available at: <http://rmarkdown.rstudio.com/> and (shameless plug):
 
 ![](img/rep_book_cover.png)
 
 
-## If there is time. . .
+---
+
+# If there is time. . .
 
 <br>
 <br>
@@ -953,4 +974,6 @@ We only covered basic tools. Much more information is available at: <http://rmar
 Begin converting a piece of your research to R Markdown.
 
 
-## References
+---
+
+# References
