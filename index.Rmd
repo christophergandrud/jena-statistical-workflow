@@ -1,4 +1,0 @@
----
-title: Workflow for Statistical Analysis
-site: blogdown:::blogdown_site
----
