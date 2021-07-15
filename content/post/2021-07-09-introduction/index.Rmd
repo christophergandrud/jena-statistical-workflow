@@ -16,6 +16,6 @@ Tags: [R, Literate Programming]
 
 ## 📣 Lecture slides
 
-```{r echo=FALSE}
+```{r echo=FALSE, message=FALSE}
 knitr::include_url("https://relaxed-snyder-30b307.netlify.app/slides/intro-slides/intro-slides")
 ```
