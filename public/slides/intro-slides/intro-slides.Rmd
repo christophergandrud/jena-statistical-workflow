@@ -2,7 +2,7 @@
 title: "Introduction to Workflow for Statistical Analysis"
 author: "Christopher Gandrud"
 institute: "Jena"
-date: "2021-07-15 (updated: `r Sys.Date()`)"
+date: "2021-07-14 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     css: [robot, metropolis-fonts]
