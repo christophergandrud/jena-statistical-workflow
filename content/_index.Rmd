@@ -1,6 +1,5 @@
 ---
 title: Workflow for Statistical Analysis
-site: blogdown:::blogdown_site
 ---
 
 #  Workflow of Statistical Data Analysis
