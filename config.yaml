@@ -1,5 +1,18 @@
+baseurl: "https://relaxed-snyder-30b307.netlify.app/"
+languageCode: "en-us"
+title: "Workflow for Statistical Analysis"
 theme: "hugo-xmin"
-baseURL: https://relaxed-snyder-30b307.netlify.app/
-languageCode: en-us
-title: Workflow for Statistical Analysis
-author: Christopher Gandrud
+ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
+
+menu:
+  main:
+    - name: Home
+      url: ""
+      weight: 1
+    - name: Tags
+      url: "tags/"
+      weight: 2
+
+params:
+  description: "Materials for Workflow for Statistical Analysis July 2021"
+

@@ -1,22 +1,26 @@
----
-title: "Why Automated Data Retrieval and Management?"
-author: "Christopher Gandrud"
-institute: "Jena"
-date: "2021-07-10 (updated: `r Sys.Date()`)"
-output:
-  xaringan::moon_reader:
-    css: [robot, metropolis-fonts]
-    lib_dir: libs
-    nature:
-      highlightStyle: github
-      highlightLines: true
-      countIncrementalSlides: false
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Why Automated Data Retrieval and Management?</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Christopher Gandrud" />
+    <script src="libs/header-attrs-2.9/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/robot.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Why Automated Data Retrieval and Management?
+### Christopher Gandrud
+### Jena
+### 2021-07-10 (updated: 2021-07-15)
+
 ---
 
-```{r setup, include=FALSE}
-library(tidyverse)
-theme_set(theme_minimal())
-```
+
+
 
 # 📝 Lesson Preview
 
@@ -71,7 +75,7 @@ color: #24292F
 
 # Workflow vs. Work Execution
 
-> process of **programmatically** extracting data (from structured and unstructured sources) for further data processing, analysis, and storage.
+&gt; process of **programmatically** extracting data (from structured and unstructured sources) for further data processing, analysis, and storage.
 
 .small[see also [Wikipedia Data Extraction](https://en.wikipedia.org/wiki/Data_extraction)]
 
@@ -83,7 +87,7 @@ color: #24292F
 
 # Automated data management
 
-> Creation, storage, and modification of structured data (including metadata) for programmatic access.
+&gt; Creation, storage, and modification of structured data (including metadata) for programmatic access.
 
 ---
 
@@ -93,7 +97,7 @@ color: #24292F
 
 # Programmatic
 
-> a task done through computer program **code**. It is repeatable and not manual.
+&gt; a task done through computer program **code**. It is repeatable and not manual.
 
 ---
 
@@ -103,7 +107,7 @@ color: #24292F
 
 # Ideally our programs are **extensible**
 
-> designed to be used not just with data we have seen, but also new data.
+&gt; designed to be used not just with data we have seen, but also new data.
 
 ---
 
@@ -155,30 +159,17 @@ Automated data collection and retrieval **scales**.
 
 We don't just want to solve a customer problem once, we want to solve it many times with the **marginal cost decreasing** each additional time we solve the problem.
 
-```{r return-to-scale, echo=FALSE, fig.height = 2.5, dpi=300}
-x <- seq(1, 10, 0.01)
-returns_to_scale <- tibble(x = x, y = x^-2)
-
-ggplot(returns_to_scale, aes(x, y)) +
-  geom_line(color = "pink", size = 1) +
-  xlab("Quantity produced") + ylab("Cost of production\n") +
-  theme(
-        axis.text.x=element_blank(),
-        axis.ticks.x=element_blank(),
-        axis.text.y=element_blank(),
-        axis.ticks.y=element_blank()
-        )
-```
+![](intro-slides_files/figure-html/return-to-scale-1.png)&lt;!-- --&gt;
 
 ---
 
 # 🏭 Industry 
 
-<br>
-<br>
-<br>
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
 
-> "It's not interesting if it doesn't scale." -- Jim Freeman
+&gt; "It's not interesting if it doesn't scale." -- Jim Freeman
 
 ---
 
@@ -186,9 +177,7 @@ ggplot(returns_to_scale, aes(x, y)) +
 
 So, being able to scale data science--automate data retrieval and management--is highly valued. E.g. on [PayScale](https://www.payscale.com/research/DE/Job=Data_Scientist/Salary):
 
-```{r pay-by-experience, echo=FALSE}
-knitr::include_graphics("img/pay-by-experience.png")
-```
+![](img/pay-by-experience.png)&lt;!-- --&gt;
 
 ---
 
@@ -217,7 +206,7 @@ background-color: #FFC400
 
 #  Really reproducible research
 
-> the data and code used to make a finding are **available** and they are **sufficient** for an independent researcher to **recreate the finding** (Peng 2011, 1226)
+&gt; the data and code used to make a finding are **available** and they are **sufficient** for an independent researcher to **recreate the finding** (Peng 2011, 1226)
 
 Make available the research, **not just the advertising** for the findings (e.g. papers, book).
 
@@ -236,7 +225,7 @@ i.e. independent verification.
 
 # Reproducibility vs. Replication
 
-> ''A study can be reproducible and still be wrong'' [Peng 2014](http://simplystatistics.org/2014/06/06/the-real-reason-reproducible-research-is-important/).
+&gt; ''A study can be reproducible and still be wrong'' [Peng 2014](http://simplystatistics.org/2014/06/06/the-real-reason-reproducible-research-is-important/).
 
 E.g. a finding that is statistically significant in one study may remain statistically
 significant when reproduced using the original data/code, but **replication studies
@@ -313,9 +302,7 @@ because they try to explain 'wrong' findings.
 # Reproducible research workflow
 
 .center[
-```{r rep-flow, echo=FALSE, out.width="70%"}
-knitr::include_graphics("img/rep-research-workflow.png")
-```
+&lt;img src="img/rep-research-workflow.png" width="70%" /&gt;
 ]
 
 .small[from Gandrud (2020, 25)]
@@ -346,7 +333,7 @@ background-color: #000000
 
 # 🏛 Ethical data retrieval and management
 
-> Privacy and data protection are fundamental rights, which need to be protected. ([EUI 2019](https://www.eui.eu/Documents/ServicesAdmin/DeanOfStudies/ResearchEthics/Guide-Data-Protection-Research.pdf))
+&gt; Privacy and data protection are fundamental rights, which need to be protected. ([EUI 2019](https://www.eui.eu/Documents/ServicesAdmin/DeanOfStudies/ResearchEthics/Guide-Data-Protection-Research.pdf))
 
 ---
 
@@ -362,7 +349,7 @@ Consider the needs for privacy and protecting persons' data.
 
 # Personal data 
 
-> In legal terms, ‘personal data’ means: any information relating to identified or identifiable natural persons referred to as 'data subjects. 'Identifiable persons' can be identified:
+&gt; In legal terms, ‘personal data’ means: any information relating to identified or identifiable natural persons referred to as 'data subjects. 'Identifiable persons' can be identified:
 - directly, or
 - indirectly, in particular by reference to an identification number or to one or more factors specific to their physical, psychological, genetic, mental, economic, cultural or social identity.
 
@@ -374,7 +361,7 @@ Consider the needs for privacy and protecting persons' data.
 
 You might think you can simply replace peoples' names with a random number, but . . .
 
-> I conducted an example re-identification study by showing how newspaper stories about hospital visits in Washington State leads to identifying the matching health record 43% of the time ([Sweeney 2015](https://techscience.org/a/2015092903/))
+&gt; I conducted an example re-identification study by showing how newspaper stories about hospital visits in Washington State leads to identifying the matching health record 43% of the time ([Sweeney 2015](https://techscience.org/a/2015092903/))
 
 Sweeney's insights led to new areas of data management like [differential privacy](https://www.johndcook.com/blog/2018/11/06/what-is-differential-privacy/). 
 
@@ -382,7 +369,7 @@ Sweeney's insights led to new areas of data management like [differential privac
 
 # Data privacy
 
-> can mean different things in different contexts and cultures. It is therefore important
+&gt; can mean different things in different contexts and cultures. It is therefore important
 to detail the purpose of the research according to the different understandings of privacy. For
 example, in ‘covert research’ researchers should take into account the meanings of public and
 private in the contexts they are studying. Covert observation should only proceed if researchers
@@ -394,7 +381,7 @@ observation. EUI (2019, 5)
 
 # Data protection
 
-> aims at guaranteeing the individual’s right to privacy. It refers to the **technical
+&gt; aims at guaranteeing the individual’s right to privacy. It refers to the **technical
 and legal framework** designed to **ensure that personal data are safe** from unforeseen, unintended
 or malevolent use. Data protection therefore includes e.g. measures concerning collection, access
 to data, communication and conservation of data. In addition, a data protection strategy can also
@@ -410,7 +397,7 @@ The EU is a leader in data protection with the General Data Protection Regulatio
 
 # 🇪🇺 GDPR penalties
 
-> a fine up to **€20 million or up to 4% of the annual worldwide turnover** of the preceding financial year in case of an enterprise, whichever is greater, if there has been an infringement of the following provisions: (Article 83, Paragraph 5 & 6[31])
+&gt; a fine up to **€20 million or up to 4% of the annual worldwide turnover** of the preceding financial year in case of an enterprise, whichever is greater, if there has been an infringement of the following provisions: (Article 83, Paragraph 5 &amp; 6[31])
 - the basic principles for processing, including conditions for consent, pursuant to Articles 5, 6, 7, and 9
 the data subjects' rights pursuant to Articles 12 to 222
 - the transfers of personal data to a recipient in a third country or an international organisation pursuant to Articles 44 to 49
@@ -443,9 +430,7 @@ the data subjects' rights pursuant to Articles 12 to 222
 
 # ⚠️ How much effort should you give to automation?
 
-```{r echo=FALSE, out.width="75%"}
-knitr::include_graphics("https://imgs.xkcd.com/comics/is_it_worth_the_time.png")
-```
+&lt;img src="https://imgs.xkcd.com/comics/is_it_worth_the_time.png" width="75%" /&gt;
 
 ---
 
@@ -453,11 +438,11 @@ knitr::include_graphics("https://imgs.xkcd.com/comics/is_it_worth_the_time.png")
 
 JD Long [highlights](https://twitter.com/CMastication/status/1390752830177398785) key assumptions behind this framework that might not hold:
 
-- All time is the same value -> but time right before a deadline might be more valuable than other time
+- All time is the same value -&gt; but time right before a deadline might be more valuable than other time
 
 - Automated work is the same quality as non-automated: the process of automation often improves quality (e.g. increases reproducibility)
 
-- The frequency of doing a process stays the same after it is automated: automation makes it easier to do the process again -> you do it more
+- The frequency of doing a process stays the same after it is automated: automation makes it easier to do the process again -&gt; you do it more
 
 ---
 
@@ -498,3 +483,126 @@ background-color: #FF8C03
 **Identify** ~three online data sets (in any format). What **research questions** could you explore with these data sets?
 
 What data privacy and protection challenges do you need to consider?
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
