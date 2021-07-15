@@ -3,7 +3,7 @@ title: 'R Basics 2'
 author: Christopher Gandrud
 date: '2021-07-09'
 slug: optional-r-basics-2
-weight: 4
+weight: 3
 categories:
   - R
 tags:
@@ -206,13 +206,13 @@ detectCores()</code></pre>
 <p>Let’s compute the mean of each vector in the list in parallel:</p>
 <pre class="r"><code>mclapply(three_list, mean, mc.cores = 3)</code></pre>
 <pre><code>## $A
-## [1] 1.037022
+## [1] 0.8443811
 ## 
 ## $B
-## [1] 1.837146
+## [1] 1.870079
 ## 
 ## $C
-## [1] 5.026472</code></pre>
+## [1] 5.049826</code></pre>
 <p><code>mc.cores</code> sets the number of cores to use. Usually use 1 - the number of cores you have available.</p>
 </div>
 <div id="exercises" class="section level2">

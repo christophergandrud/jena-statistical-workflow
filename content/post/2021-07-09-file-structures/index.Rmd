@@ -3,7 +3,7 @@ title: Introduction to Programmatic Files Structures
 author: Christopher Gandrud
 date: '2021-07-09'
 slug: tidy-data-structures
-weight: 5
+weight: 4
 categories:
   - R
 tags:
