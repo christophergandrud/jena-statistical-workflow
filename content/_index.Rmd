@@ -14,13 +14,13 @@ In this workshop you will learn an end-to-end and "really reproducible" workflow
 
 ## 📝 Course Outline
 
-- Introduction to statistical workflows [9:00-10:30]
+- Introduction to statistical workflows & Introduction to R Programming 1 (9:00-10:30)
     
-- Introduction to R programming [11:00-12:30]
+- Introduction to R programming 2 (11:00-12:30)
 
-- Introduction to Reproducibility and Files Structures [13:30-15:00]
+- Introduction to Reproducibility and Files Structures (13:30-15:00)
     
-- Introduction to Rmarkdown and Literate Programming [15.30-17:00]
+- Introduction to Rmarkdown and Literate Programming (15.30-17:00)
 
 ## 📚 Course Materials
     

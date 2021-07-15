@@ -134,6 +134,16 @@ color: #24292F
 
 &gt; designed to be used not just with data we have seen, but also new data.
 
+Our workflow should be **extensible** as well to many different statistical research projects.
+
+---
+
+class: inverse, centre, middle
+background-color: #FFC400
+color: #24292F
+
+Programmatic and reproducible statistical research workflows are valuable.
+
 ---
 
 # 🎓 Academic
@@ -149,22 +159,6 @@ color: #24292F
     + Make your research reproducible
 
 ---
-
-# 🏛 Government 
-
-- Public data is increasingly **accessible**.
-
-    + e.g. [World Bank Development Indicators](http://data.worldbank.org/data-catalog/world-development-indicators),
-    [GovData Germany](https://www.govdata.de/neues), [Berlin Open Data](https://daten.berlin.de/), [data.gov.uk](http://data.gov.uk/),
-    [New York City](https://nycopendata.socrata.com/),
-    [data.gov](https://www.data.gov/open-gov/)
-
-- Governments rely on data analysis for evidence based decision-making.
-
-    + Tools of open data analysis enable better use of data **within** and
-    **between** government actors.
-
-    + Governments can take advantage of analyses done by **third parties**.
 
 ---
 
@@ -209,13 +203,6 @@ So, being able to scale data science--automate data retrieval and management--is
 class: inverse, centre, middle
 
 # ⍰ Why reproducible research?
-
----
-
-class: inverse, centre, middle
-background-color: #FFC400
-
-# Automated data retrieval and management is a part of reproducible research.
 
 ---
 
@@ -349,7 +336,7 @@ because they try to explain 'wrong' findings.
 
 class: inverse, center, middle
 
-# Personal data privacy and GDPR
+# Personal data privacy
 
 ---
 
@@ -369,65 +356,6 @@ Consider the needs for privacy and protecting persons' data.
 ⚠️ It is especially important for automated data retrieval and management to **build in** privacy and data protection. 
 
 ⚠️ Automated data retrieval and management scale. If done poorly, can **scale privacy infringements**. 
-
----
-
-# Personal data 
-
-&gt; In legal terms, ‘personal data’ means: any information relating to identified or identifiable natural persons referred to as 'data subjects. 'Identifiable persons' can be identified:
-- directly, or
-- indirectly, in particular by reference to an identification number or to one or more factors specific to their physical, psychological, genetic, mental, economic, cultural or social identity.
-
-.small[EUI (2019, 5)]
-
----
-
-# Really hard to anonymize
-
-You might think you can simply replace peoples' names with a random number, but . . .
-
-&gt; I conducted an example re-identification study by showing how newspaper stories about hospital visits in Washington State leads to identifying the matching health record 43% of the time ([Sweeney 2015](https://techscience.org/a/2015092903/))
-
-Sweeney's insights led to new areas of data management like [differential privacy](https://www.johndcook.com/blog/2018/11/06/what-is-differential-privacy/). 
-
----
-
-# Data privacy
-
-&gt; can mean different things in different contexts and cultures. It is therefore important
-to detail the purpose of the research according to the different understandings of privacy. For
-example, in ‘covert research’ researchers should take into account the meanings of public and
-private in the contexts they are studying. Covert observation should only proceed if researchers
-can demonstrate clear benefits of the research, when no other research approach seems possible
-and when it is reasonably certain that no one will be harmed or suffer as a result of the
-observation. EUI (2019, 5)
-
----
-
-# Data protection
-
-&gt; aims at guaranteeing the individual’s right to privacy. It refers to the **technical
-and legal framework** designed to **ensure that personal data are safe** from unforeseen, unintended
-or malevolent use. Data protection therefore includes e.g. measures concerning collection, access
-to data, communication and conservation of data. In addition, a data protection strategy can also
-include measures to assure the accuracy of the data. EUI (2019, 5)
-
----
-
-# 🇪🇺 GDPR
-
-The EU is a leader in data protection with the General Data Protection Regulation (GDPR, 2016).
-
----
-
-# 🇪🇺 GDPR penalties
-
-&gt; a fine up to **€20 million or up to 4% of the annual worldwide turnover** of the preceding financial year in case of an enterprise, whichever is greater, if there has been an infringement of the following provisions: (Article 83, Paragraph 5 &amp; 6[31])
-- the basic principles for processing, including conditions for consent, pursuant to Articles 5, 6, 7, and 9
-the data subjects' rights pursuant to Articles 12 to 222
-- the transfers of personal data to a recipient in a third country or an international organisation pursuant to Articles 44 to 49
-- any obligations pursuant to member state law adopted under Chapter IX
-- noncompliance with an order or a temporary or definitive limitation on processing or the suspension of data flows by the supervisory authority pursuant to Article 58(2) or failure to provide access in violation of Article 58(1)
 
 ---
 
@@ -453,7 +381,7 @@ the data subjects' rights pursuant to Articles 12 to 222
 
 ---
 
-# ⚠️ How much effort should you give to automation?
+# ⚠️ How much effort should you give to automating your workflow?
 
 &lt;img src="https://imgs.xkcd.com/comics/is_it_worth_the_time.png" width="75%" /&gt;
 
@@ -471,25 +399,15 @@ JD Long [highlights](https://twitter.com/CMastication/status/1390752830177398785
 
 ---
 
-# ⚠️ The internet is unstable
-
-Never assume that URLs and content at a URL is stable! 
-
-A URL does not have a contract with you to provide stable data. 
-
-You need to be **defensive**, i.e. save/cache copies of the data on your side and include tests in your code to ensure that you quickly identify changes.
-
----
-
 # 👀 Course content preview
 
-- Introduction to statistical workflows (9:00-10:30)
+- Introduction to statistical workflows &amp; Introduction to R Programming 1 (9:00-10:30)
     
-- Introduction to R programming (11:00-12:30)
+- Introduction to R programming 2 (11:00-12:30)
 
-- Introduction to Reproducibility and Files Structures (13:30-15:00)
+- Introduction to Programmatic Files Structures (13:30-15:00)
     
-- Introduction to RMarkdown and Literate Programming (15.30-17:00)
+- Introduction to Rmarkdown and Literate Programming (15.30-17:00)
 
 ---
 
@@ -501,13 +419,9 @@ background-color: #FB3579
 ---
 
 class: inverse, center, middle
-background-color: #FF8C03
+background-color: #FB3579
 
-# 🥅 With a partner
-
-**Identify** ~three online data sets (in any format). What **research questions** could you explore with these data sets?
-
-What data privacy and protection challenges do you need to consider?
+To prepare: we will build up to converting one of your research projects to a reproducible statistical workflow.
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

@@ -1,5 +1,5 @@
 ---
-title: File Organisation and Tidy Data Structures
+title: Introduction to Programmatic Files Structures
 author: Christopher Gandrud
 date: '2021-07-09'
 slug: tidy-data-structures
@@ -17,5 +17,5 @@ Tags: [R, data management, programming]
 ## 📣 Lecture slides
 
 ```{r echo=FALSE}
-knitr::include_url("https://brave-pasteur-c09ffa.netlify.app/slides/tidy-data-structures")
+knitr::include_url("https://relaxed-snyder-30b307.netlify.app/slides/file-structures/file-structures")
 ```
