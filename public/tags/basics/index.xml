@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Workflow for Statistical Analysis</title>
-    <link>/</link>
-    <description>Recent content on Workflow for Statistical Analysis</description>
+    <title>basics on Workflow for Statistical Analysis</title>
+    <link>/tags/basics/</link>
+    <description>Recent content in basics on Workflow for Statistical Analysis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Introduction to Workflow for Statistical Analysis</title>
-      <link>/post/rep-research-tools/</link>
-      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/post/rep-research-tools/</guid>
-      <description>  📣 Lecture slides   </description>
-    </item>
-    
+    <lastBuildDate>Fri, 09 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/basics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>R Basics 1</title>
       <link>/post/optional-r-basics-1/</link>
@@ -46,24 +37,6 @@
  apply()
  Advanced: Parallel computation
     Functions If objects are the nouns of the R language, functions are the verbs. They do things to objects. Let’s use the mean function as an example. This function takes the mean of a numeric vector object. Remember our numeric_vector object from Lesson 1:</description>
-    </item>
-    
-    <item>
-      <title>Introduction to Programmatic Files Structures</title>
-      <link>/post/tidy-data-structures/</link>
-      <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/post/tidy-data-structures/</guid>
-      <description>  📣 Lecture slides   </description>
-    </item>
-    
-    <item>
-      <title>Reproducible Research Tools</title>
-      <link>/post/rep-research-tools/</link>
-      <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/post/rep-research-tools/</guid>
-      <description>  📣 Lecture slides   </description>
     </item>
     
   </channel>
