@@ -19,8 +19,6 @@ library(tidyverse)
 theme_set(theme_minimal())
 ```
 
----
-
 # Is this research?
 
 ![](img/journal_ss.png)
