@@ -137,21 +137,6 @@ Notice that the contents of the function are enclosed inside of curly brackets `
 
 When you make a function, remember to document it. You want to be able to use this function over and over. If it isn't well documented, this will be harder.
 
-A common convention is to use `@param` to document function arguments:[^1]
-
-[^1]: This stands for "parameter", a more general programming term for "argument". If you want to go deep on documenting functions, see the [roxygen2](https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html) package.
-
-```{r create-mean-rounder-document}
-# @param x a numeric vector to find the mean of
-
-mean_rounder <- function(x) {
-  mean(x) %>% 
-    round(digits = 1)
-}
-```
-
-Notice that we started the `@param` line with a `#`. In R (and many other languages), `#` is the **comment character**. Everything on a line that starts with `#` is ignored by R.
-
 ## Documenting Functions in R {#documenting}
 
 It is important to get in the habit of documenting your functions as you write them. This makes them easier for others (and yourself in the future) to understand.
@@ -284,6 +269,7 @@ Unlike social phenomena, most computer bugs are deterministic. The cause of a bu
 > Finding your bug is a process of confirming the many things that you believe are true --- until you find one which is not true.
 >
 > ---Norm Matloff (quote from [Advanced R](https://adv-r.hadley.nz/debugging.html#debugging-strategy))
+
 Great debugging is driven by having great expectations of what the program should return. Having a well defined expectation of what a program should do is important to knowing if you have a bug to begin with. One way to approach software development is to write tests for a function *before* you write the function. This is called [test drive development](https://en.wikipedia.org/wiki/Test-driven_development).
 
 Both in your functions, to test incremental expectations, and for the output of your functions you include automated tests. Here is a silly example. Imagine that we have a function that should add 2 + 2 and then divide by 2 to return 2. We can create an automated test like this:
