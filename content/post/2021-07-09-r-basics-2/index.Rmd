@@ -28,7 +28,7 @@ Tags: [R, functions, if, loops, basics]
 
     -   [`apply()`](#apply-intro)
 
--   [Debugging in R](#debugging-intro)
+-   [Debugging and Testing in R](#debugging-intro)
 
 -   [Advanced: Parallel computation](#parallel-intro)
 

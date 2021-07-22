@@ -19,7 +19,7 @@ editor_options:
 
 ## 👋 Welcome
 
-Welcome to to the course! This is the first of 2 sets of exercises
+This is the first of 2 sets of exercises
 introducing you to the R programming language[^1] that we will use
 throughout the workshop.
 

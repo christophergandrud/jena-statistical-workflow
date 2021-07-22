@@ -28,7 +28,7 @@ Tags: [R, functions, if, loops, basics]
 <li><p><a href="#loop-intro"><code>for</code> loops</a></p></li>
 <li><p><a href="#apply-intro"><code>apply()</code></a></p></li>
 </ul></li>
-<li><p><a href="#debugging-intro">Debugging in R</a></p></li>
+<li><p><a href="#debugging-intro">Debugging and Testing in R</a></p></li>
 <li><p><a href="#parallel-intro">Advanced: Parallel computation</a></p></li>
 </ul>
 </div>
@@ -308,13 +308,13 @@ detectCores()</code></pre>
 <p>Let’s compute the mean of each vector in the list in parallel:</p>
 <pre class="r"><code>mclapply(three_list, mean, mc.cores = 3)</code></pre>
 <pre><code>## $A
-## [1] 1.307449
+## [1] 0.9757253
 ## 
 ## $B
-## [1] 2.015101
+## [1] 2.12747
 ## 
 ## $C
-## [1] 4.868314</code></pre>
+## [1] 5.04578</code></pre>
 <p><code>mc.cores</code> sets the number of cores to use. Usually use 1 - the number of cores you have available.</p>
 </div>
 <div id="exercises" class="section level2">

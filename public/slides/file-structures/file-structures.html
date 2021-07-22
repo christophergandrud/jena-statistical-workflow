@@ -15,16 +15,14 @@ class: center, middle, inverse, title-slide
 # File Organisation and Tidy Data Structures
 ### Christopher Gandrud
 ### Jena
-### 2021-07-15 (updated: 2021-07-15)
+### 2021-07-15 (updated: 2021-07-22)
 
 ---
 
 
 
 
----
-
-# 🙇‍♀️ Remember: Practical tips for reproducible research
+# 🙇️ Remember: Practical tips for reproducible research
 
 - ✏️ Document Everything!
 
@@ -235,7 +233,8 @@ list.files()
 ```
 
 ```
-## [1] "file-structures.Rmd" "img"
+## [1] "file-structures.html" "file-structures.Rmd"  "img"                 
+## [4] "libs"
 ```
 
 ```R
@@ -317,7 +316,7 @@ Alternatives to spaces:
 
 # Load files into R--Dynamically Link
 
-There are a number of R commands to load files, depending on the file type.
+There are a number of R functions to load files, depending on the file type.
 
 - Load Data: `read.table`, `read.csv` `read.dta` `xlsx::read.xlsx`,
 `rio::import`, `jsonlite::read_json`, `readr::read_csv`
@@ -370,6 +369,13 @@ Not covered in this course, but you should always manage your source code with a
 See [here](https://cdn.rawgit.com/HertieDataScience/SyllabusAndLectures/8392513e7e826f5d7842bd437d9a415b808ef745/LectureSlides/Lecture3/Lecture3.html#26) for more details.
 
 Let me know if you are interested and I can give you an introduction if we have time.
+
+---
+
+class: inverse, center, middle
+background-color: #FB3579
+
+## Try -- create or review a file structure for one of your research projects. Navigate it using the file system from R.
 
 
 

@@ -3,6 +3,7 @@ title: "Reproducible Research Tools"
 author: "Christopher Gandrud"
 institute: "Jena"
 date: "2021-07-15 (updated: `r Sys.Date()`)"
+bibliography: datafest_rep.bib
 output:
   xaringan::moon_reader:
     css: [robot, metropolis-fonts]
@@ -38,27 +39,6 @@ Quantitative data science is the **creation of a computer programme** to gather,
 
 ---
 
-# Why reproducible research?
-
-There are **costs** to using these tools. **Why** do it?
-
-> Reproducibility is a **minimum** standard for evaluating scientific claims.
-
----
-
-# Mistakes
-
-<br>
-<br>
-
-Reproducibility can help uncover research fabrication. But more commonly . . .
-
-<br>
-
-We **all make mistakes** during all stages of our research!
-
----
-
 class: inverse, center, middle
 
 # Plan for learning tools
@@ -76,12 +56,6 @@ class: inverse, center, middle
 > - **R code chunks** into R Markdown documents that gathers data and outputs results
 
 > - **Pandoc** footnotes and citations
-
----
-
-# Following along
-
-In this workshop we will **create a simple fake research project/article** using the literate programming tool R Markdown.
 
 ---
 
@@ -119,7 +93,7 @@ In RStudio: `File` > `New File` > `R Markdown...`
 <br>
 <br>
 
-Save your file as **main.Rmd** in a new folder called **datafest_reproduce**.
+Save your file as **main.Rmd** in a new folder called (maybe) **jena-statistical-workflow**.
 
 ---
 
@@ -174,14 +148,14 @@ YAML is a **human read-able data format**.
 
 ```
 ---
-title: "DataFest 2017 | Reproducible Research Tools"
+title: "Jena 2020 | Reproducible Research Tools"
 author: "Christopher Gandrud -- IQSS"
 date: "17 January 2017"
 output:
     ioslides_presentation:
-        css: datafest_slides.css
+        css: jena_slides.css
         logo: img/iqss_logo_flat.png
-bibliography: datafest_rep.bib
+bibliography: jena_rep.bib
 ---
 ```
 
@@ -484,6 +458,8 @@ Images:
 ![text description](FILE/PATH.png)
 ```
 
+Though in RMarkdown it is better to use `knitr::include_graphics("FILE_PATH")` to include images.
+
 ---
 
 # Markdown syntax
@@ -748,7 +724,7 @@ model_table
 
 # Do . . .
 
-Include a regression table with `stargazer` in *main.Rmd*.
+Include a regression table with `modelsummary` in *main.Rmd*.
 
 ---
 
@@ -874,8 +850,6 @@ Google scholar generates BibTeX entries.
 
 On an entry click `Cite > BibTeX`.
 
-For a YouTube how-to see [https://www.youtube.com/watch?v=SsJSR2b4_qc](https://www.youtube.com/watch?v=SsJSR2b4_qc).
-
 Sometimes they need to be **cleaned** a little.
 
 ---
@@ -901,20 +875,20 @@ to include a citation in-text.
 
 General format: `@CITE_KEY`.
 
-So if the cite key is `box1973` then `@box1973` will return  @box1973 in the text
+So if the cite key is `box1973` then `@box1973` will return  Box (1973) in the text
 of the presentation document.
 
 ---
 
 # Formatting In-Text Citations
 
-| Markup                      | Result                    |
-| --------------------------- | ------------------------- |
-| `[@box1973]`                | [@box1973]                |
-| `[see @box1973]`            | [see @box1973]            |
-| `[see @box1973, 33-40]`     | [see @box1973, 33-40]     |
-| `[@box1973; @acemoglu2000]` | [@box1973; @acemoglu2000] |
-| `@box1973 [33-40]`          | @box1973 [33-40]          |
+| Markup                      | 
+| --------------------------- | 
+| `[@box1973]`                | 
+| `[see @box1973]`            | 
+| `[see @box1973, 33-40]`     | 
+| `[@box1973; @acemoglu2000]` | 
+| `@box1973 [33-40]`          | 
 
 ---
 
@@ -960,15 +934,11 @@ knitr::include_graphics("img/rep_book_cover.png")
 
 ---
 
-# If there is time. . .
+# Try. . .
 
 <br>
 <br>
 <br>
 
-Begin converting a piece of your research to R Markdown.
+Begin converting a piece of your research to R Markdown and knit your data cleaning and analysis into a PDF.
 
-
----
-
-# References
