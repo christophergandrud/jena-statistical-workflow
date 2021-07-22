@@ -40,12 +40,14 @@
       
       <guid>/post/optional-r-basics-2/</guid>
       <description>📝 Lesson Preview  Functions
+ Documenting Functions in R
  Control Flow
  if statements
  for loops
  apply()
+  Debugging in R
  Advanced: Parallel computation
-    Functions If objects are the nouns of the R language, functions are the verbs. They do things to objects. Let’s use the mean function as an example. This function takes the mean of a numeric vector object. Remember our numeric_vector object from Lesson 1:</description>
+   Functions If objects are the nouns of the R language, functions are the verbs. They do things to objects. Let’s use the mean function as an example. This function takes the mean of a numeric vector object.</description>
     </item>
     
     <item>

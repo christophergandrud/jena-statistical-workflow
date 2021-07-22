@@ -21,13 +21,17 @@ theme_set(theme_minimal())
 
 # Is this research?
 
-![](img/journal_ss.png)
+```{r echo=FALSE}
+knitr::include_graphics("img/journal_ss.png")
+```
 
 ---
 
 # Is this research?
 
-![](img/cox.png)
+```{r echo=FALSE}
+knitr::include_graphics("img/cox.png")
+```
 
 ---
 
@@ -106,13 +110,17 @@ another Large Hadron Collider),
 
 # Sufficient info.?--unconnected files
 
-![](img/non_linked_workflow/unconnected_workflow.png)
+```{r echo=FALSE}
+knitr::include_graphics("img/non_linked_workflow/unconnected_workflow.png")
+```
 
 ---
 
 # Sufficient info.?--dynamically linked files
 
-![](img/linked_workflow/rep_workflow.png)
+```{r echo=FALSE}
+knitr::include_graphics("img/linked_workflow/rep_workflow.png")
+```
 
 ---
 
@@ -122,7 +130,7 @@ Quantitative data science is the **creation of a computer programme** to gather,
 
 <br>
 
-**Literate programming paradigm**: the human-readable presentation of a programme is interspersed with computer source code that are compiled together [see @knuth1992].
+**Literate programming paradigm**: the human-readable presentation of a programme is interspersed with computer source code that are compiled together (see Knuth1992).
 
 ---
 
@@ -139,13 +147,23 @@ Quantitative data science is the **creation of a computer programme** to gather,
 
     + Conversion from R Markdown to these formats is done via [Pandoc](http://pandoc.org/)
 
+- **[Jupyter Notebooks](https://jupyter.org/)** are a major alternative used frequently in industry.
+
+    + Also use Markdown and "knit/weave" results together and can be used with R and Python. 
+
 ---
 
 # Why reproducible research? 
 
-There are **costs** to using these tools. **Why** do it?
+There are **costs** to using these tools. You have to learn how to program.
 
-> Reproducibility is a **minimum** standard for evaluating scientific claims.
+So, **why** do it?
+
+---
+
+# Scientific standard
+
+Reproducibility is a **minimum** standard for evaluating scientific claims.
 
 ---
 
@@ -166,7 +184,9 @@ We **all make mistakes** during all stages of our research!
 
 I wanted to merge fisal policy data from two data sets using country IDs.
 
-![](img/codes.png)
+```{r echo=FALSE}
+knitr::include_graphics("img/codes.png")
+```
 
 ---
 
@@ -174,7 +194,9 @@ I wanted to merge fisal policy data from two data sets using country IDs.
 
 But, Eurostat uses slightly different country IDs.
 
-![](img/mismatched_codes.png)
+```{r echo=FALSE}
+knitr::include_graphics("img/mismatched_codes.png")
+```
 
 ---
 
@@ -182,7 +204,9 @@ But, Eurostat uses slightly different country IDs.
 
 Fortunately, I had documented all of my steps using literate programming and could quickly find and fix the problem.
 
-![](img/matched_codes.png)
+```{r echo=FALSE}
+knitr::include_graphics("img/matched_codes.png")
+```
 
 ---
 
@@ -196,6 +220,8 @@ Fortunately, I had documented all of my steps using literate programming and cou
 <br>
 
 Really reproducible research is an important part of this process.
+
+Including automated **tests** in reproducible research docs also helps find mistakes fast.
 
 ---
 
@@ -216,9 +242,11 @@ class: inverse, center, middle
 
 # 🤔 In your research:
 
+- do you plan to uphold **core scientific standards** (hopefully this goes without saying)?
+
 - do you plan to **repeat** the task?
 
-- do you want others to be able to **replicate** your data collection process?
+- do you want others (or yourself in the future( to be able to **replicate** your data collection process?
 
 - does the data task have **non-trivial** scope and complexity?
 
@@ -260,7 +288,7 @@ color: #24292F
 
 But having an effective **workflow** is critical. A workflow is:
 
-> the process by which work is selected and organised for execution.
+> the process by which work is selected and **organised** for execution.
 
 ---
 
@@ -270,7 +298,7 @@ color: #24292F
 
 # Not covered in this course: 
 
-**Prioritisation**
+**Selection/Prioritisation**
 
 This course does not cover how you select projects and prioritise avenues of investigation, though this is crucial for a project's success.
 
@@ -284,7 +312,7 @@ color: #24292F
 
 **Tools for automating research execution**
 
-This course does cover the programmatic tools for automating research execution.
+This course does cover the programmatic tools for automating quantitative research organisationa and execution.
 
 ---
 
@@ -308,13 +336,7 @@ color: #24292F
 
 Our workflow should be **extensible** as well to many different statistical research projects.
 
----
-
-class: inverse, centre, middle
-background-color: #FFC400
-color: #24292F
-
-Programmatic and reproducible statistical research workflows are valuable.
+Programmatic and reproducible statistical research workflows are valuable for extensibility
 
 ---
 
@@ -332,16 +354,6 @@ Programmatic and reproducible statistical research workflows are valuable.
 
 ---
 
-# 🏕 NGOs
-
-NGO's are becoming increasingly data-oriented and need people with **skills** to
-**handle and analyse** this data.
-
-Ex. Former Hertie Master's students co-founded
-[CorrelAid](http://correlaid.org/) to assist NGOs with data analysis.
-
----
-
 # 🏭 Industry 
 
 Automated data collection and retrieval **scales**.
@@ -356,10 +368,10 @@ ggplot(returns_to_scale, aes(x, y)) +
   geom_line(color = "pink", size = 1) +
   xlab("Quantity produced") + ylab("Cost of production\n") +
   theme(
-        axis.text.x=element_blank(),
-        axis.ticks.x=element_blank(),
-        axis.text.y=element_blank(),
-        axis.ticks.y=element_blank()
+        axis.text.x = element_blank(),
+        axis.ticks.x = element_blank(),
+        axis.text.y = element_blank(),
+        axis.ticks.y = element_blank()
         )
 ```
 
@@ -490,8 +502,5 @@ background-color: #FB3579
 class: inverse, center, middle
 background-color: #FB3579
 
-To prepare: we will build up to converting one of your research projects to a reproducible statistical workflow.
+## To prepare: we will build up to converting one of *your* research projects to a reproducible statistical workflow.
 
----
-
-## References
